@@ -12,6 +12,9 @@
 		D9B60FD12021B552001CDEB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FCF2021B552001CDEB4 /* Main.storyboard */; };
 		D9B60FD32021B552001CDEB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FD22021B552001CDEB4 /* Assets.xcassets */; };
 		D9B60FD62021B552001CDEB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FD42021B552001CDEB4 /* LaunchScreen.storyboard */; };
+		D9B60FE32021B95B001CDEB4 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B60FE22021B95B001CDEB4 /* PreviewViewController.swift */; };
+		D9B60FE52021BDC9001CDEB4 /* flightRECORD.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FE42021BDC9001CDEB4 /* flightRECORD.html */; };
+		D9B60FE72021C21C001CDEB4 /* Sample.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FE62021C21C001CDEB4 /* Sample.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		D9B60FD22021B552001CDEB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9B60FD52021B552001CDEB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9B60FD72021B552001CDEB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B60FE22021B95B001CDEB4 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		D9B60FE42021BDC9001CDEB4 /* flightRECORD.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = flightRECORD.html; sourceTree = "<group>"; };
+		D9B60FE62021C21C001CDEB4 /* Sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Sample.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 		D9B60FBF2021B552001CDEB4 = {
 			isa = PBXGroup;
 			children = (
+				D9B60FDD2021B5EF001CDEB4 /* HTML Templates */,
 				D9B60FCA2021B552001CDEB4 /* htmlUPDATE */,
 				D9B60FC92021B552001CDEB4 /* Products */,
 			);
@@ -60,7 +67,18 @@
 				D9B60FD22021B552001CDEB4 /* Assets.xcassets */,
 				D9B60FD42021B552001CDEB4 /* LaunchScreen.storyboard */,
 				D9B60FD72021B552001CDEB4 /* Info.plist */,
+				D9B60FE22021B95B001CDEB4 /* PreviewViewController.swift */,
 			);
+			path = htmlUPDATE;
+			sourceTree = "<group>";
+		};
+		D9B60FDD2021B5EF001CDEB4 /* HTML Templates */ = {
+			isa = PBXGroup;
+			children = (
+				D9B60FE42021BDC9001CDEB4 /* flightRECORD.html */,
+				D9B60FE62021C21C001CDEB4 /* Sample.html */,
+			);
+			name = "HTML Templates";
 			path = htmlUPDATE;
 			sourceTree = "<group>";
 		};
@@ -126,7 +144,9 @@
 			files = (
 				D9B60FD62021B552001CDEB4 /* LaunchScreen.storyboard in Resources */,
 				D9B60FD32021B552001CDEB4 /* Assets.xcassets in Resources */,
+				D9B60FE52021BDC9001CDEB4 /* flightRECORD.html in Resources */,
 				D9B60FD12021B552001CDEB4 /* Main.storyboard in Resources */,
+				D9B60FE72021C21C001CDEB4 /* Sample.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +159,7 @@
 			files = (
 				D9B60FCE2021B552001CDEB4 /* ViewController.swift in Sources */,
 				D9B60FCC2021B552001CDEB4 /* AppDelegate.swift in Sources */,
+				D9B60FE32021B95B001CDEB4 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
