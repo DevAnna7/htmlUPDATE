@@ -52,11 +52,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyr-nJ-xMt">
-                                <rect key="frame" x="-139" y="139" width="1112" height="834"/>
+                                <rect key="frame" x="-95" y="172" width="1024" height="768"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="834" id="C9H-Wa-wdt"/>
-                                    <constraint firstAttribute="width" constant="1112" id="zzj-Ho-rhA"/>
+                                    <constraint firstAttribute="height" constant="768" id="C9H-Wa-wdt"/>
+                                    <constraint firstAttribute="width" constant="1024" id="zzj-Ho-rhA"/>
                                 </constraints>
                             </webView>
                         </subviews>

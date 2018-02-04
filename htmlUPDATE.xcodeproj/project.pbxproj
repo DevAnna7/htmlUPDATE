@@ -15,6 +15,12 @@
 		D9B60FE32021B95B001CDEB4 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B60FE22021B95B001CDEB4 /* PreviewViewController.swift */; };
 		D9B60FE52021BDC9001CDEB4 /* flightRECORD.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FE42021BDC9001CDEB4 /* flightRECORD.html */; };
 		D9B60FE72021C21C001CDEB4 /* Sample.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FE62021C21C001CDEB4 /* Sample.html */; };
+		D9B60FE9202478CE001CDEB4 /* LogbookComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B60FE8202478CE001CDEB4 /* LogbookComposer.swift */; };
+		D9B60FEB2026EED0001CDEB4 /* flightRECORD2.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FEA2026EED0001CDEB4 /* flightRECORD2.html */; };
+		D9B60FED2026F32F001CDEB4 /* flightRECORD_BODY.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FEC2026F32F001CDEB4 /* flightRECORD_BODY.html */; };
+		D9B60FF12026FFB0001CDEB4 /* flightRECORD_BODYTEMP.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FEE2026FFB0001CDEB4 /* flightRECORD_BODYTEMP.html */; };
+		D9B60FF22026FFB1001CDEB4 /* flightRECORD_LINE.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FEF2026FFB0001CDEB4 /* flightRECORD_LINE.html */; };
+		D9B60FF32026FFB1001CDEB4 /* flightRECORD_LINEBLANK.html in Resources */ = {isa = PBXBuildFile; fileRef = D9B60FF02026FFB0001CDEB4 /* flightRECORD_LINEBLANK.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		D9B60FE22021B95B001CDEB4 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		D9B60FE42021BDC9001CDEB4 /* flightRECORD.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = flightRECORD.html; sourceTree = "<group>"; };
 		D9B60FE62021C21C001CDEB4 /* Sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Sample.html; sourceTree = "<group>"; };
+		D9B60FE8202478CE001CDEB4 /* LogbookComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogbookComposer.swift; sourceTree = "<group>"; };
+		D9B60FEA2026EED0001CDEB4 /* flightRECORD2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = flightRECORD2.html; sourceTree = "<group>"; };
+		D9B60FEC2026F32F001CDEB4 /* flightRECORD_BODY.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = flightRECORD_BODY.html; sourceTree = "<group>"; };
+		D9B60FEE2026FFB0001CDEB4 /* flightRECORD_BODYTEMP.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = flightRECORD_BODYTEMP.html; sourceTree = "<group>"; };
+		D9B60FEF2026FFB0001CDEB4 /* flightRECORD_LINE.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = flightRECORD_LINE.html; sourceTree = "<group>"; };
+		D9B60FF02026FFB0001CDEB4 /* flightRECORD_LINEBLANK.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = flightRECORD_LINEBLANK.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 				D9B60FD42021B552001CDEB4 /* LaunchScreen.storyboard */,
 				D9B60FD72021B552001CDEB4 /* Info.plist */,
 				D9B60FE22021B95B001CDEB4 /* PreviewViewController.swift */,
+				D9B60FE8202478CE001CDEB4 /* LogbookComposer.swift */,
 			);
 			path = htmlUPDATE;
 			sourceTree = "<group>";
@@ -76,7 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				D9B60FE42021BDC9001CDEB4 /* flightRECORD.html */,
+				D9B60FEA2026EED0001CDEB4 /* flightRECORD2.html */,
+				D9B60FEC2026F32F001CDEB4 /* flightRECORD_BODY.html */,
 				D9B60FE62021C21C001CDEB4 /* Sample.html */,
+				D9B60FEE2026FFB0001CDEB4 /* flightRECORD_BODYTEMP.html */,
+				D9B60FEF2026FFB0001CDEB4 /* flightRECORD_LINE.html */,
+				D9B60FF02026FFB0001CDEB4 /* flightRECORD_LINEBLANK.html */,
 			);
 			name = "HTML Templates";
 			path = htmlUPDATE;
@@ -142,10 +160,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B60FEB2026EED0001CDEB4 /* flightRECORD2.html in Resources */,
 				D9B60FD62021B552001CDEB4 /* LaunchScreen.storyboard in Resources */,
 				D9B60FD32021B552001CDEB4 /* Assets.xcassets in Resources */,
+				D9B60FF22026FFB1001CDEB4 /* flightRECORD_LINE.html in Resources */,
 				D9B60FE52021BDC9001CDEB4 /* flightRECORD.html in Resources */,
 				D9B60FD12021B552001CDEB4 /* Main.storyboard in Resources */,
+				D9B60FF12026FFB0001CDEB4 /* flightRECORD_BODYTEMP.html in Resources */,
+				D9B60FED2026F32F001CDEB4 /* flightRECORD_BODY.html in Resources */,
+				D9B60FF32026FFB1001CDEB4 /* flightRECORD_LINEBLANK.html in Resources */,
 				D9B60FE72021C21C001CDEB4 /* Sample.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B60FCE2021B552001CDEB4 /* ViewController.swift in Sources */,
+				D9B60FE9202478CE001CDEB4 /* LogbookComposer.swift in Sources */,
 				D9B60FCC2021B552001CDEB4 /* AppDelegate.swift in Sources */,
 				D9B60FE32021B95B001CDEB4 /* PreviewViewController.swift in Sources */,
 			);

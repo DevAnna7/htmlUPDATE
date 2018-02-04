@@ -14,7 +14,13 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webPreview: UIWebView!
     
-
+    // import logbookComposer var
+    var logbookComposer:LogbookComposer!
+    
+    var htmlContent:String!
+    
+    var slideCDs:[String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,8 +30,8 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        createLogbookPageAsHTML()
-        displayFileAsHTML()
+        createLogbookAsHTML()
+        //displayFileAsHTML()
 
         
     }
@@ -48,19 +54,12 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     */
 
     
-    // Load HTML template and change its values and then save it again
-    func createLogbookPageAsHTML() {
-        
-        
-        
-        
-    }
     
-    // displays the given file in the UIWebView
+    // displays the given file in the UIWebView // CHECK TEMPLATES
     func displayFileAsHTML() {
 
         // set url path and sets up a request
-            let url = Bundle.main.url(forResource: "flightRECORD", withExtension:"html")
+            let url = Bundle.main.url(forResource: "flightRECORD_BODYTEMP", withExtension:"html")
             let request = URLRequest(url: url!)
         
         
@@ -77,4 +76,78 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     }
     
     
+    /////// SETUP DATA ENTRY
+    
+    // set the dummy entry data
+    
+    func setData() {
+        
+
+        slideCDs = ["DENTON", "WATSON", "MILLER", "JONES"]
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    // Load HTML template and change its default values
+    func createLogbookAsHTML() {
+        
+        // creates object to work with
+        logbookComposer = LogbookComposer()
+        
+        // some dummy HARD data
+        setData()
+        
+        // line data
+        var lineEntry = ""
+        
+        // add line entries for each leg
+        for i in 0..<slideCDs.count {
+
+            lineEntry += logbookComposer.lineEntry(captain: slideCDs[i])
+            
+        }
+        
+        // then add blank lines for remainder to make up a full page
+        let reqBlanks = 43 - slideCDs.count
+        
+        //add blank line entries
+        for _ in 0..<reqBlanks {
+
+            lineEntry += logbookComposer.lineEntry(captain: "")
+        
+        }
+    
+        
+        // change HTML file with inputs and set the htmlContent var AND Display it on the WEBVIEW
+        if let logbookHTML = logbookComposer.renderLogbook(entry: lineEntry) {
+            
+            
+            // load HTML String into the webview
+            webPreview.loadHTMLString(logbookHTML, baseURL: NSURL(string: logbookComposer.pathToLogbookHTMLTemplate!)! as URL)
+            htmlContent = logbookHTML
+
+            
+            // rotates the webView 90 deg clockwise
+            webPreview.transform = CGAffineTransform(rotationAngle: (CGFloat(Double.pi/2)))
+            
+                        // TEST ONLY Scale webView to fit bounds
+            
+                        //webPreview.frame = self.view.bounds
+            
+            // scales html content to fit the WebView
+            webPreview.scalesPageToFit = true
+            
+        }
+
+    
+    }
+
+
+
 }
