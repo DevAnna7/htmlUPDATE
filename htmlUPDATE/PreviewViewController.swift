@@ -39,7 +39,7 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        webPreview.transform = CGAffineTransform(translationX: 0, y: -28)
+        //webPreview.transform = CGAffineTransform(translationX: 0, y: -28)
     }
 
 
@@ -98,7 +98,27 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     
     
     
-    
+    func correctDisplay() {
+        
+        var t = CGAffineTransform.identity
+        
+        t = t.rotated(by: (CGFloat(Double.pi/2)))
+        t = t.translatedBy(x: 0, y: 0)
+            
+        //t = CGAffineTransform.init(rotationAngle: (CGFloat(Double.pi/2)))
+        //t = CGAffineTransform.init(translationX: 0, y: 35)
+        
+        
+        webPreview.transform = t
+        
+        
+        //let centreX = NSLayoutConstraint(item: webPreview, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0)
+        //let centreY = NSLayoutConstraint(item: webPreview, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 50)
+        
+        //view.addConstraints([centreX, centreY])
+        self.edgesForExtendedLayout = []
+        
+    }
     
     // Load HTML template and change its default values
     func createLogbookAsHTML() {
@@ -120,7 +140,7 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
         }
         
         // then add blank lines for remainder to make up a full page
-        let reqBlanks = 43 - slideCDs.count
+        let reqBlanks = 46 - slideCDs.count
         
         //add blank line entries
         for _ in 0..<reqBlanks {
@@ -140,23 +160,26 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
 
             
             // rotates the webView 90 deg clockwise
-            webPreview.transform = CGAffineTransform(rotationAngle: (CGFloat(Double.pi/2)))
+            //webPreview.transform = CGAffineTransform(rotationAngle: (CGFloat(Double.pi/2)))
             
                         // TEST ONLY Scale webView to fit bounds
             
                         //webPreview.frame = self.view.bounds
             
             // move the webview below nav bar
-            let leftCont = NSLayoutConstraint(item: webPreview, attribute: .leftMargin, relatedBy: .equal, toItem: view, attribute: .leftMargin, multiplier: 1.0, constant: 0)
-            let rightCont = NSLayoutConstraint(item: webPreview, attribute: .rightMargin, relatedBy: .equal, toItem: view, attribute: .rightMargin, multiplier: 1.0, constant: 0)
-            let topCont = NSLayoutConstraint(item: webPreview, attribute: .topMargin, relatedBy: .equal, toItem: view, attribute: .topMargin, multiplier: 1.0, constant: 0)
-            let botCont = NSLayoutConstraint(item: webPreview, attribute: .bottomMargin, relatedBy: .equal, toItem: view, attribute: .bottomMargin, multiplier: 1.0, constant: 0)
+            //let leftCont = NSLayoutConstraint(item: webPreview, attribute: .leftMargin, relatedBy: .equal, toItem: view, attribute: .leftMargin, multiplier: 1.0, constant: 0)
+            //let rightCont = NSLayoutConstraint(item: webPreview, attribute: .rightMargin, relatedBy: .equal, toItem: view, attribute: .rightMargin, multiplier: 1.0, constant: 0)
+            //let topCont = NSLayoutConstraint(item: webPreview, attribute: .topMargin, relatedBy: .equal, toItem: view, attribute: .topMargin, multiplier: 1.0, constant: 0)
+            //let botCont = NSLayoutConstraint(item: webPreview, attribute: .bottomMargin, relatedBy: .equal, toItem: view, attribute: .bottomMargin, multiplier: 1.0, constant: 0)
             
-            view.addConstraints([leftCont, rightCont, topCont, botCont])
+            //view.addConstraints([leftCont, rightCont, topCont, botCont])
             
             // scales html content to fit the WebView
             webPreview.scalesPageToFit = true
             
+            
+            
+            correctDisplay()
         }
 
     
