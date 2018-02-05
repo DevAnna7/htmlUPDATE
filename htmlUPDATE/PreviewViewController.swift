@@ -36,6 +36,12 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
         
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        webPreview.transform = CGAffineTransform(translationX: 0, y: -28)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -139,6 +145,14 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
                         // TEST ONLY Scale webView to fit bounds
             
                         //webPreview.frame = self.view.bounds
+            
+            // move the webview below nav bar
+            let leftCont = NSLayoutConstraint(item: webPreview, attribute: .leftMargin, relatedBy: .equal, toItem: view, attribute: .leftMargin, multiplier: 1.0, constant: 0)
+            let rightCont = NSLayoutConstraint(item: webPreview, attribute: .rightMargin, relatedBy: .equal, toItem: view, attribute: .rightMargin, multiplier: 1.0, constant: 0)
+            let topCont = NSLayoutConstraint(item: webPreview, attribute: .topMargin, relatedBy: .equal, toItem: view, attribute: .topMargin, multiplier: 1.0, constant: 0)
+            let botCont = NSLayoutConstraint(item: webPreview, attribute: .bottomMargin, relatedBy: .equal, toItem: view, attribute: .bottomMargin, multiplier: 1.0, constant: 0)
+            
+            view.addConstraints([leftCont, rightCont, topCont, botCont])
             
             // scales html content to fit the WebView
             webPreview.scalesPageToFit = true
